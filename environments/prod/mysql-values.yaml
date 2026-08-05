@@ -1,0 +1,14 @@
+replicaCount: 2
+
+image:
+  repository: mysql
+  tag: "8.0"
+
+service:
+  type: ClusterIP
+  port: 3306
+
+mysql:
+  database: prod
+  username: prodadmin
+  password: prodpassword

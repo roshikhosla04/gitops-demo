@@ -3,7 +3,7 @@ kind: Application
 
 metadata:
   name: myapp
-  namespace: argocd
+  namespace: prod
 
 spec:
   project: default
@@ -15,7 +15,7 @@ spec:
 
     helm:
       valueFiles:
-        - ../../environments/dev/myapp-values.yaml
+        - ../../environments/prod/myapp-values.yaml
 
   destination:
     server: https://kubernetes.default.svc
