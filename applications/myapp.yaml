@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/<YOUR_GITHUB_USERNAME>/gitops-demo.git
+    repoURL: https://github.com/roshikhosla04/gitops-demo.git
     targetRevision: main
     path: charts/myapp
 
