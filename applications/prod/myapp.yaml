@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/roshikhosla04/my-helm-charts.git
+    repoURL: https://github.com/roshikhosla04/gitops-demo.git
     targetRevision: main
     path: charts/myapp
 
