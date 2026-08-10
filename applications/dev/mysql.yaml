@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 
 metadata:
-  name: backend
+  name: mysql
   namespace: argocd
 
 spec:
@@ -11,15 +11,15 @@ spec:
   source:
     repoURL: https://github.com/roshikhosla04/gitops-demo.git
     targetRevision: main
-    path: charts/backend
+    path: charts/mysql
 
     helm:
       valueFiles:
-        - ../../environments/dev/backend-values.yaml
+        - ../../environments/dev/mysql-values.yaml
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: backend
+    namespace: mysql
 
   syncPolicy:
     automated:

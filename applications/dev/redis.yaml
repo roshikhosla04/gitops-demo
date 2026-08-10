@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 
 metadata:
-  name: backend
+  name: redis
   namespace: argocd
 
 spec:
@@ -11,15 +11,15 @@ spec:
   source:
     repoURL: https://github.com/roshikhosla04/gitops-demo.git
     targetRevision: main
-    path: charts/backend
+    path: charts/redis
 
     helm:
       valueFiles:
-        - ../../environments/dev/backend-values.yaml
+        - ../../environments/dev/redis-values.yaml
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: backend
+    namespace: redis
 
   syncPolicy:
     automated:
